@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	char c + 'a';
+	char c = 'a';
 	int i = 0;
 
 	while (i < 26)
