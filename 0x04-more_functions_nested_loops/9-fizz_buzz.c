@@ -1,41 +1,24 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Write a program that prints the number from 1 to 100,
- * followed by a new line. But for multiples of three print
- * Fizz instead of the number and for the multiples of five 
- * print Buzz.
- * For numbers which are multiplies of 
- * both three and five print FizzBuzz.
+ * print_most_numbers - print 0 to 9 without 2 and 4.
  *
- * Return: always 0 (success).
+ * Return: Always 0
  */
-
-int main(void)
+void print_most_numbers(void)
 {
-	int i;
+	int a;
 
-	for (i = 1; i <= 100; i++)
+	for (a = 0; a <= 9; a++)
 	{
-		if (i % 3 == 0 && i % 5 != 0)
+		if (a == 2 || a == 4)
 		{
-			printf(" Fizz");
-		} else if (i % 5 == 0 && i % 3 != 0)
+			continue;
+		}
+		else
 		{
-			printf(" Buzz");
-		} else if (i % 3 == 0 && i % 5 == 0)
-		{
-			printf(" FizzBuzz");
-		} else if (i == 1)
-		{
-			printf("%d", i);
-		} else
-		{
-			printf(" %d", i);
+			_putchar('0' + a);
 		}
 	}
-	printf("\n");
-
-	return (0);
-
+	_putchar('\n');
 }

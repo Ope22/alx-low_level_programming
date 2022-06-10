@@ -1,33 +1,31 @@
 #include "main.h"
-
 /**
- * print_triangle - a function that prints triangle on the terminal.
- * followed by a new line.
- * @size: as a parameter
- * Return: always 0 (success).
+ * print_triangle - print a triangle aligned right, using '#'
+ * @size: Size of triangle
  */
-
 void print_triangle(int size)
 {
-	if (size <= 0)
-	{
-		_putchar('\n');
-	} else
-	{
-		int i, j;
+	int c, i, j;
 
-		for (i = 1; i <= size; i++)
+	c = 0;
+	i = size - 1;
+	while (c < size)
+	{
+		i = size - 1 - c;
+		j = c + 1;
+		while (i > 0)
 		{
-			for (j = i; j < size; j++)
-			{
-				_putchar(' ');
-
-
-			for (j = 1; j <= i; j++)
-			{
-				_putchar('#');
-			}
-			_putchar('\n');
+			_putchar(32);
+			i--;
 		}
+		while (j > 0)
+		{
+			_putchar('#');
+			j--;
+		}
+		_putchar(10);
+		c++;
 	}
+	if (size <= 0)
+		_putchar(10);
 }
