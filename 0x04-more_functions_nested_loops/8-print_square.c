@@ -1,29 +1,25 @@
 #include "main.h"
 
 /**
- * print_triangle - a function that prints triangle on the terminal.
+ * print_square - a function that prints a square, followed by a new line.
  * followed by a new line.
  * @size: as a parameter
  * Return: always 0 (success).
  */
 
-void print_triangle(int size)
+void print_square(int size)
 {
 	if (size <= 0)
 	{
 		_putchar('\n');
-	} else
+	}
+	else
 	{
 		int i, j;
 
-		for (i = 1; i <= size; i++)
+		for (j = 1; j <= size; j++)
 		{
-			for (j = i; j < size; j++)
-			{
-				_putchar(' ');
-
-
-			for (j = 1; j <= i; j++)
+			for (i = 1; i <= size; i++)
 			{
 				_putchar('#');
 			}
