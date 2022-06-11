@@ -1,27 +1,17 @@
 #include "main.h"
-
 /**
- * print_line - a function that draws a straight line in the terminal.
- * followed by a new line.
- * @n: as a parameter
- * Return: always 0 (success).
+ * print_line - draw a straight line
+ * @n: number of times underscore is printed
+ * Description: Can only use _putchar to print
+ * Return: void
  */
-
 void print_line(int n)
 {
-	if (n <= 0)
-	{
-		_putchar('\n');
-	} else
-	{
-		int i;
+	int c:
 
-		for (i = 1; i <= n; i++)
-		{
-			_putchar('-');
-		}
-		_putchar('\n');
+	for (c = 0; c < n; c++)
+	{
+		_putchar('_');
 	}
+	_putchar('\n');
 }
-
-		
