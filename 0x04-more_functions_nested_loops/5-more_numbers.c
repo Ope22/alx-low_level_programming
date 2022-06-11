@@ -4,7 +4,7 @@
  *
  * 10 times.
  * Return: no return.
- * */
+ */
 void more_numbers(void)
 {
 	int i, ch;
