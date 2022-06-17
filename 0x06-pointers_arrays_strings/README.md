@@ -1,0 +1,1 @@
+pointers stray and array
