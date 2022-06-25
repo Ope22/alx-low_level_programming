@@ -1,15 +1,22 @@
 #include "main.h"
-#include <string.h>
-
 /**
- *  * _strspn - a function that gets the length of a prefix substring.
- *   *
- *    * @s: This is the C string to be scanned
- *     * @accept: This is the character to be searched in str.
- *      * Return: This function returns the number of characters
+ *  * _strncpy - copies a strin
+ *   * @dest: destination.
+ *    * @src: source.
+ *     * @n: amount of bytes from src.
+ *      * Return: the pointer to dest.
  *       */
-
-unsigned int _strspn(char *s, char *accept)
+char *_strncpy(char *dest, char *src, int n)
 {
-		return (strspn(s, accept));
+		int i;
+
+			for (i = 0; i < n && src[i] != '\0'; i++)
+					{
+								dest[i] = src[i];
+									}
+				for ( ; i < n; i++)
+						{
+									dest[i] = '\0';
+										}
+					return (dest);
 }
