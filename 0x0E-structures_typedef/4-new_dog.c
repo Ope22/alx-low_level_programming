@@ -99,7 +99,3 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	return (dog);
 }
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-
