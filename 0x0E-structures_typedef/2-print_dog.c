@@ -1,14 +1,17 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
-#include <stdio.h>
+
 /**
- * print_dog - a function that prints a struct dog
- * @d: pointer to the structure
- * Description: Longer description
- **/
+ * print_dog - prints a struct dog.
+ * @d: struct dog.
+ *
+ * Return: no return.
+ */
 
 void print_dog(struct dog *d)
 {
+
 	if (d == NULL)
 		return;
 
