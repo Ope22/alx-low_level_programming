@@ -1,41 +1,41 @@
 #include "lists.h"
-#include <string.h>
-
+#include "string.h"
+#include <stdlib.h>
+#include <stdio.h>
 /**
- * add_node_end - adds a node at the end, my dude
- * @head: points to the head
- * @str: the string to put into it
- * Return: pointer to new node or NULL
+ * add_node_end - adds a new node at the end  of a list_t list
+ * @head: pointer to a pointer to a struct
+ * @str: string to be copied
+ *
+ * Return: the address of new element, or NULL if it failed
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *newNode, *last;
+	list_t *prev_node = *head;
+	list_t *new_node;
 	unsigned int i;
 
-	if (!(head && str))
+	new_node = malloc(sizeof(list_t));
+	if (new_node == NULL)
 		return (NULL);
 
-	newNode = malloc(sizeof(list_t));
-	if (!newNode)
-		return (NULL);
+	i = 0;
+	while (str[i] != '\0')
+		i++;
 
-	newNode->str = strdup(str);
-	for (i = 0; str[i]; i++)
-	{}
-	newNode->len = i;
-	newNode->next = NULL;
-
-	if (!*head)
+	new_node->str = strdup(str);
+	new_node->len = i;
+	new_node->next = NULL;
+	if (*head == NULL)
 	{
-		*head = newNode;
-		return (newNode);
+		*head = new_node;
+		return (new_node);
 	}
-
-	last = *head;
-	while (last->next)
+	else
 	{
-		last = last->next;
+		while (prev_node->next != NULL)
+			prev_node = prev_node->next;
+		prev_node->next = new_node;
 	}
-	last->next = newNode;
-	return (newNode);
+	return (new_node);
 }
